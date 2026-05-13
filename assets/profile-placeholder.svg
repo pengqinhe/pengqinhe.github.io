@@ -10,7 +10,7 @@
   <rect width="640" height="800" fill="url(#bg)" />
   <circle cx="78" cy="72" r="3" fill="#ffd166" />
   <circle cx="154" cy="160" r="2" fill="#ffffff" />
-  <circle cx="502" cy="116" r="3" fill="#7bdff2" />
+  <circle cx="502" cy="116" r="3" fill="#c8c6c6" />
   <circle cx="560" cy="252" r="2" fill="#ffffff" />
   <circle cx="96" cy="324" r="2" fill="#ffffff" />
   <circle cx="320" cy="268" r="112" fill="#f7f0d7" />
