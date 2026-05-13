@@ -92,8 +92,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(240px, 330px) minmax(0, 1fr);
-  gap: clamp(32px, 6vw, 80px);
+  grid-template-columns: minmax(340px, 520px) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 64px);
   align-items: center;
   min-height: calc(100vh - 120px);
   padding: 40px 0 80px;
@@ -101,8 +101,8 @@ main {
 
 .hero-photo {
   position: relative;
-  width: min(100%, 330px);
-  aspect-ratio: 4 / 5;
+  width: min(100%, 520px);
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border: 1px solid rgba(4, 37, 108, 0.16);
   border-radius: 8px;
@@ -124,6 +124,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 42% 50%;
 }
 
 .hero-copy {
@@ -152,9 +153,21 @@ h1 {
   margin-bottom: 18px;
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.4rem, 9vw, 6.4rem);
+  font-size: clamp(2.7rem, 6.5vw, 4.8rem);
   line-height: 0.95;
   letter-spacing: 0;
+}
+
+h1 span {
+  display: block;
+}
+
+.chinese-name {
+  margin-top: 10px;
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 h2 {
@@ -373,7 +386,7 @@ address a {
   }
 
   .hero-photo {
-    max-width: 280px;
+    max-width: 520px;
   }
 
   .section {
