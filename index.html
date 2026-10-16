@@ -8,28 +8,34 @@
       content="Academic personal homepage with biography, contact information, and selected papers."
     />
     <title>Qinhe Peng | Academic Homepage</title>
-    <link rel="stylesheet" href="styles.css?v=20260513" />
+    <meta name="theme-color" content="#f8f9f5" />
+    <link rel="stylesheet" href="styles.css?v=20261016" />
+    <script src="site.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header id="top" class="site-header">
       <a class="brand" href="#top">Qinhe Peng</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#papers">Papers</a>
+        <a href="#demos">Demos</a>
+        <a href="#papers">Research</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main id="top">
+    <main id="main">
       <section class="hero" aria-labelledby="intro-title">
         <div class="hero-photo">
-          <img src="assets/my_photo.jpg" alt="Portrait photograph of Qinhe Peng" />
+          <img src="assets/my_photo.jpg" alt="Portrait photograph of Qinhe Peng" fetchpriority="high" />
+          <span class="photo-caption">University of Pennsylvania · Philadelphia</span>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow">Graduate Researcher / Scholar</p>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Robotics &amp; embodied intelligence</p>
           <h1 id="intro-title">
             <span>Qinhe Peng</span>
             <span class="chinese-name">彭沁禾</span>
           </h1>
+          <p class="hero-intro">Understanding intelligence.<br />Bringing it into <em>motion.</em></p>
           <div class="hero-bio">
             <p>
               I am currently a <strong>ROBO MSE student</strong> at the
@@ -43,25 +49,53 @@
             </p>
           </div>
           <div class="hero-actions" aria-label="Profile links">
-            <a class="button primary" href="mailto:pengqh20@seas.upenn.edu">Email</a>
-            <a class="button" href="assets/cv.pdf" aria-label="Open curriculum vitae">CV</a>
-            <a class="button" href="https://scholar.google.com/citations?user=Tk-1WVIAAAAJ&hl=en&oi=ao" aria-label="Open Google Scholar profile">Google Scholar</a>
+            <a class="button primary" href="mailto:pengqh20@seas.upenn.edu">Get in touch <span aria-hidden="true">↗</span></a>
+            <a class="button" href="assets/cv.pdf" aria-label="Open curriculum vitae">CV <span aria-hidden="true">↗</span></a>
+            <a class="button" href="https://scholar.google.com/citations?user=Tk-1WVIAAAAJ&hl=en&oi=ao" aria-label="Open Google Scholar profile">Google Scholar <span aria-hidden="true">↗</span></a>
           </div>
+        </div>
+      </section>
+
+      <section id="demos" class="section demos-section" aria-labelledby="demos-title">
+        <div class="section-heading">
+          <div><p class="section-kicker">01 / In the real world</p><h2 id="demos-title">Research in motion<span>.</span></h2></div>
+          <p class="section-note">From responsive actions to spatial memory.<br />A few moments from our robot experiments.</p>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-media">
+              <video controls muted playsinline preload="none" poster="assets/demos/pi-imle.jpg" aria-label="PI-IMLE reactive manipulation demo"><source src="assets/demos/pi-imle.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="demo-copy"><p class="demo-category">PI-IMLE / Real robot</p><h3>Reacting in the moment</h3><p>Responsive manipulation with single-step action generation.</p><a href="https://kianhk6.github.io/IMLE-VLA/">Explore PI-IMLE <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-media">
+              <video controls muted playsinline preload="none" poster="assets/demos/scene-graph-real.jpg" aria-label="Scene graph policy on a Franka arm performing the feed-animals task"><source src="assets/demos/scene-graph-real.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="demo-copy"><p class="demo-category">Scene graphs / Real robot</p><h3>Remembering the scene</h3><p>Franka tabletop manipulation with spatial and temporal context.</p><a href="https://pengqinhe.github.io/Scene-Graph-CVPR2026-website/">Explore scene graphs <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-media">
+              <video controls muted playsinline preload="none" poster="assets/demos/scene-graph-sim.jpg" aria-label="Simulated Spot robot performing the heat-up-tea task"><source src="assets/demos/scene-graph-sim.mp4" type="video/mp4" /></video>
+            </div>
+            <div class="demo-copy"><p class="demo-category">Scene graphs / Simulation</p><h3>Beyond the field of view</h3><p>A simulated Spot robot takes on the heat-up-tea task.</p><a href="https://pengqinhe.github.io/Scene-Graph-CVPR2026-website/">Explore mobile manipulation <span aria-hidden="true">↗</span></a></div>
+          </article>
         </div>
       </section>
 
       <section id="papers" class="section papers-section">
         <div class="section-heading">
-          <p class="section-kicker">Publications</p>
-          <h2>Selected Papers</h2>
+          <div><p class="section-kicker">02 / Selected work</p><h2>Ideas into action<span>.</span></h2></div>
+          <p class="section-note">Robot learning, vision-language-action models,<br />and efficient visual perception.</p>
         </div>
         <ol class="paper-list">
-          <li>
+          <li class="featured-paper">
             <div class="paper-visual">
               <img src="assets/jackss.png" alt="JacKSS steering experiment results" />
             </div>
             <div class="paper-content">
               <h3>Words Are Not Motions: Steering Vision-Language-Action Models with Jacobian Pullbacks</h3>
+              <p class="paper-summary">Training-free steering of robot motion and semantic choices through internal policy representations.</p>
               <div class="paper-links">
                 <a href="https://jacobianvla.github.io/">Project</a>
                 <a href="assets/jackss.pdf">PDF</a>
@@ -136,8 +170,8 @@
 
       <section id="contact" class="section contact-section">
         <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Get In Touch</h2>
+          <p class="section-kicker">03 / Say hello</p>
+          <h2>Let’s connect<span>.</span></h2>
         </div>
         <address>
           <a href="mailto:pengqh20@seas.upenn.edu">pengqh20@seas.upenn.edu</a>
@@ -148,7 +182,7 @@
 
     <footer class="site-footer">
       <span>Last updated October 2026</span>
-      <a href="#top">Back to top</a>
+      <a href="#main">Back to top ↑</a>
     </footer>
   </body>
 </html>
