@@ -35,7 +35,7 @@ strong { color: var(--text); font-weight: 600; }
 .button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
 .button:hover { background: #e9efe8; border-color: var(--accent); }
 .button.primary:hover { background: #184a3d; }
-.hero-actions .button { min-height: 36px; padding: 0; border: 0; border-radius: 0; background: none; font-size: 14px; font-weight: 500; }
+.hero-actions .button { min-height: 36px; padding: 0; border: 0; border-radius: 0; background: none; color: var(--accent); font-family: inherit; font-size: 14px; font-weight: 500; }
 .hero-actions .button:hover { text-decoration: underline; }
 .section { padding: 36px 0; border-top: 1px solid var(--line); }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 32px; }
